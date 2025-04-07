@@ -16,11 +16,11 @@ const generateOTP = () => {
 // Send OTP via Twilio SMS
 const sendOTP = async (phoneNumber, otpCode) => {
   try {
-    // await twilioClient.messages.create({
-    //   body: `Your verification code is: ${otpCode}`,
-    //   from: process.env.TWILIO_PHONE_NUMBER,
-    //   to: phoneNumber,
-    // });
+    await twilioClient.messages.create({
+      body: `Your verification code is: ${otpCode}`,
+      from: process.env.TWILIO_PHONE_NUMBER,
+      to: phoneNumber,
+    });
 
     console.log(otpCode);
 
