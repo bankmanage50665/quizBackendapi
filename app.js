@@ -44,8 +44,8 @@ app.use((err, req, res, next) => {
   });
 });
 
-const PORT = 3000;
-// const PORT = process.env.PORT || 3000;
+// const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 mongoose
   .connect(url)
